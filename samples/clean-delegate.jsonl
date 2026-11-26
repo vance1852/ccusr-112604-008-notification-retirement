@@ -1,8 +1,9 @@
 {"at": 1, "kind": "delegation", "consumer": "coast", "proxy": "relay", "topic": "status", "start": 1, "until": 27}
 {"at": 4, "kind": "delivery", "tenant": "T-b", "message": "a01", "consumer": "coast", "topic": "status", "route": "legacy-text"}
 {"at": 6, "kind": "delivery_receipt", "tenant": "T-b", "message": "a01", "actor": "relay", "route": "legacy-text", "stage": "applied"}
-{"at": 8, "kind": "delivery", "tenant": "T-b", "message": "a01", "consumer": "coast", "topic": "status", "route": "next"}
-{"at": 12, "kind": "new_confirm", "consumer": "coast", "topic": "status", "route": "next", "reference": "a01"}
+{"at": 8, "kind": "delivery", "tenant": "T-b", "message": "a02", "consumer": "coast", "topic": "status", "route": "next"}
+{"at": 10, "kind": "delivery_receipt", "tenant": "T-b", "message": "a02", "actor": "coast", "route": "next", "stage": "applied"}
+{"at": 12, "kind": "new_confirm", "consumer": "coast", "topic": "status", "route": "next", "reference": "a02"}
 {"at": 15, "kind": "line_action", "tenant": "T-b", "resource": "poll-text", "action": "pause", "operation": "p2"}
 {"at": 19, "kind": "line_effect", "resource": "poll-text", "operation": "p2", "state": "disabled"}
 {"at": 28, "kind": "line_action", "tenant": "T-b", "resource": "poll-text", "action": "restore", "operation": "r2"}

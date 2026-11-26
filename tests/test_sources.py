@@ -16,7 +16,7 @@ class SourceTests(unittest.TestCase):
         names = ["shift-log.jsonl", "clean-delegate.jsonl"]
         primary, alternate = [list(load_timeline(self.root / name)) for name in names]
         self.assertEqual(len(primary), 13)
-        self.assertEqual(len(alternate), 8)
+        self.assertEqual(len(alternate), 9)
         self.assertNotEqual(primary, alternate)
 
     def test_consecutive_observations_are_preserved(self):
