@@ -1,0 +1,58 @@
+{
+  "routes": [
+    {
+      "route": "legacy-voice",
+      "resources": [
+        "poll-legacy",
+        "return-mail"
+      ]
+    },
+    {
+      "route": "legacy-text",
+      "resources": [
+        "poll-text",
+        "return-mail"
+      ]
+    },
+    {
+      "route": "next",
+      "resources": [
+        "batch-hook"
+      ]
+    }
+  ],
+  "consumers": [
+    {
+      "consumer": "southern",
+      "tenant": "T-a",
+      "topics": [
+        "case"
+      ]
+    },
+    {
+      "consumer": "coast",
+      "tenant": "T-b",
+      "topics": [
+        "case",
+        "status"
+      ]
+    },
+    {
+      "consumer": "relay",
+      "tenant": "T-b",
+      "topics": []
+    }
+  ],
+  "tenant_contract": [
+    {
+      "tenant": "T-a",
+      "legacy_until": 60,
+      "confirm_seconds": 6
+    },
+    {
+      "tenant": "T-b",
+      "legacy_until": 75,
+      "confirm_seconds": 10
+    }
+  ]
+}

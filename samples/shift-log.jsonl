@@ -1,0 +1,13 @@
+{"at": 3, "kind": "delivery", "tenant": "T-a", "message": "n8", "consumer": "southern", "topic": "case", "route": "legacy-voice"}
+{"at": 5, "kind": "delivery", "tenant": "T-b", "message": "n8", "consumer": "coast", "topic": "status", "route": "legacy-text"}
+{"at": 6, "kind": "delegation", "consumer": "coast", "proxy": "relay", "topic": "status", "start": 6, "until": 30}
+{"at": 10, "kind": "delivery_receipt", "tenant": "T-a", "message": "n8", "actor": "southern", "route": "next", "stage": "received"}
+{"at": 12, "kind": "new_confirm", "consumer": "southern", "topic": "case", "route": "next", "reference": "n8"}
+{"at": 19, "kind": "delivery_receipt", "tenant": "T-a", "message": "n8", "actor": "southern", "route": "legacy-voice", "stage": "applied"}
+{"at": 20, "kind": "line_action", "tenant": "T-a", "resource": "return-mail", "action": "disable", "operation": "off2"}
+{"at": 28, "kind": "delivery_receipt", "tenant": "T-b", "message": "n8", "actor": "relay", "route": "legacy-text", "stage": "received"}
+{"at": 32, "kind": "delivery_receipt", "tenant": "T-b", "message": "n8", "actor": "relay", "route": "next", "stage": "applied"}
+{"at": 37, "kind": "line_effect", "resource": "return-mail", "operation": "off2", "state": "still_active"}
+{"at": 46, "kind": "line_action", "tenant": "T-a", "resource": "poll-legacy", "action": "retire", "operation": "off3"}
+{"at": 47, "kind": "line_effect", "resource": "poll-legacy", "operation": "off3", "state": "removed"}
+{"at": 50, "kind": "line_action", "tenant": "T-a", "resource": "poll-legacy", "action": "restore", "operation": "on3"}
